@@ -56,18 +56,18 @@ export default {
 <!-- TEMPLATE HTML -->
 <template>
   <div class="row bg-light justify-content-center">
-    <div class="col-8 d-flex py-2">
+
+    <div class="col-8 d-flex py-4">
       <div class="col-4">
-        <img class="logo" src="../assets/img/dc-logo.png" />
+        <img class="logo" src="/public/dc-logo.png" />
       </div>
       <div class="links_container col-8 d-flex justify-content-end align-items-center text-center">
-        <div class="header_links col-1 d-flex justify-content-center align-items-center" v-for="link in links">
+        <div v-for="link in links" :href="link.url" class="header_links col-1 d-flex justify-content-center align-items-center" >
           {{ link.text }}
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 
@@ -81,10 +81,12 @@ export default {
 
   cursor: pointer;
   font-size: 0.7rem;
+  font-weight: bold;
   color: black;
 }
 .header_links:hover{
   border-bottom: 5px solid blue;
+  color: blue;
 }
 
 </style>

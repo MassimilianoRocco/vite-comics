@@ -28,8 +28,9 @@ export default {
 
 <!-- TEMPLATE HTML GENERALE -->
 <template>
-  
+
   <Header />
+  <Main />
 
 
 
