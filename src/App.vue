@@ -31,6 +31,7 @@ export default {
 
   <Header />
   <Main />
+  <Footer />
 
 
 

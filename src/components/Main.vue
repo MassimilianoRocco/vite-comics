@@ -87,7 +87,4 @@ export default {
        width: 60px;
        aspect-ratio: 1;
     }
-    .items_container>p{
-        
-    }
 </style>

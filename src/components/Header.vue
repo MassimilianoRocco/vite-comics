@@ -62,7 +62,7 @@ export default {
         <img class="logo" src="/public/dc-logo.png" />
       </div>
       <div class="links_container col-8 d-flex justify-content-end align-items-center text-center">
-        <div v-for="link in links" :href="link.url" class="header_links col-1 d-flex justify-content-center align-items-center" >
+        <div v-for="link in links" :href="link.url" class="header_links d-flex justify-content-center align-items-center" >
           {{ link.text }}
         </div>
       </div>
