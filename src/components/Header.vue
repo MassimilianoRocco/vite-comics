@@ -46,6 +46,12 @@ export default {
                 },
             ],
         }
+    }, 
+    methods:{
+        getImg(path) {
+            let risultato = new URL("../assets/" + path, import.meta.url);
+            return risultato.href;
+        },
     }
 }
 
@@ -59,7 +65,7 @@ export default {
 
     <div class="col-8 d-flex py-4">
       <div class="col-4">
-        <img class="logo" src="/public/dc-logo.png" />
+        <img class="logo" src="../assets/dc-logo.png" />
       </div>
       <div class="links_container col-8 d-flex justify-content-end align-items-center text-center">
         <div v-for="link in links" :href="link.url" class="header_links d-flex justify-content-center align-items-center" >

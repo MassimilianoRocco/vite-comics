@@ -26,6 +26,12 @@ export default {
                 },
             ],
         }
+    },
+    methods:{
+        getImg(path) {
+            let risultato = new URL("../assets/" + path, import.meta.url);
+            return risultato.href;
+        },
     }
 }
 
@@ -51,6 +57,7 @@ export default {
         </div>
     </div>
 
+    <!-- LowerFooter -->
     <div class="row justify-content-center lower_footer">
         <div class="col-8 d-flex py-4">
             <div class="col-3">
@@ -60,19 +67,19 @@ export default {
                 <div class="col-6 d-flex my_link_container">
                     <p>FOLLOW US</p>
                     <button class="logo_button">
-                        <img src="/public/footer-facebook.png">
+                        <img src="../assets/footer-facebook.png">
                     </button>
                     <button class="logo_button">
-                        <img src="/public/footer-twitter.png">
+                        <img src="../assets/footer-twitter.png">
                     </button>
                     <button class="logo_button">
-                        <img src="/public/footer-youtube.png">
+                        <img src="../assets/footer-youtube.png">
                     </button>
                     <button class="logo_button">
-                        <img src="/public/footer-pinterest.png">
+                        <img src="../assets/footer-pinterest.png">
                     </button>
                     <button class="logo_button">
-                        <img src="/public/footer-periscope.png">
+                        <img src="../assets/footer-periscope.png">
                     </button>
                 </div>
             </div>
@@ -85,7 +92,7 @@ export default {
 <!-- STYLE -->
 <style scoped>
     .upper_footer{
-        background-image: url(/public/footer-bg.jpg);
+        background-image: url(../assets/footer-bg.jpg);
     }
     .elements_container{
         width: 100%;

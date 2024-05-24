@@ -5,33 +5,39 @@ export default {
         return {
             items: [
                 {
-                    img: "public/buy-comics-digital-comics.png", 
+                    img: "buy-comics-digital-comics.png", 
                     text: "DIGITAL COMICS",
                     url:"",
                 },
                 {
-                    img: "public/buy-comics-merchandise.png",
+                    img: "buy-comics-merchandise.png",
                     text: "DC MERCHANDISE",
                     url:"",
                 },
                 {
-                    img: "public/buy-comics-subscriptions.png",
+                    img: "buy-comics-subscriptions.png",
                     text: "SUBSCRIPTION",
                     url:"",
                 },
                 {
-                    img: "public/buy-comics-shop-locator.png",
+                    img: "buy-comics-shop-locator.png",
                     text: "COMIC SHOP LOCATOR",
                     url:"",
                 },
                 {
-                    img: "public/buy-dc-power-visa.svg",
+                    img: "buy-dc-power-visa.svg",
                     text: "DC POWER VISA",
                     url:"",
                 },
                 
             ],
         }
+    },
+    methods:{
+        getImg(path) {
+            let risultato = new URL("../assets/" + path, import.meta.url);
+            return risultato.href;
+        },
     }
 }
 
@@ -53,7 +59,7 @@ export default {
         <div class="content_container col-8 d-flex">
             <div v-for="item in items" :href="item.url" class="items_container d-flex align-items-center justify-content-center p-2">
                 <div class="col-4 d-flex align-items-center justify-content-center">
-                    <img :src="item.img">
+                    <img :src="getImg(item.img)">
                 </div>
                 <div class="col-8 d-flex align-items-center ms-2">
                     <p>{{ item.text }}</p>
