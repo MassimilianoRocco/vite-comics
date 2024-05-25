@@ -28,9 +28,10 @@ export default {
         }
     },
     methods:{
-        getImage(nomefile) {
-            return new URL(`../assets/${nomefile}`, import.meta.url);
-        }
+        getImg(path) {
+            let risultato = new URL("../assets/" + path, import.meta.url);
+            return risultato.href;
+        },
     }
 }
 
@@ -102,7 +103,7 @@ export default {
     }
     
     .my_logo_container{
-        background-image: url(../assets/dc-logo-bg.png);
+        background-image: url(/public/dc-logo-bg.png);
         background-repeat: no-repeat;
         background-position: center;
     }
