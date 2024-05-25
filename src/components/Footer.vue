@@ -103,7 +103,7 @@ export default {
     }
     
     .my_logo_container{
-        background-image: url(/public/dc-logo-bg.png);
+        background-image: url(../assets/dc-logo-bg.png);
         background-repeat: no-repeat;
         background-position: center;
     }

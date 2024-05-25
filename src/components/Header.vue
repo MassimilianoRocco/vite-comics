@@ -63,7 +63,7 @@ export default {
 <template>
   <div class="row bg-light justify-content-center">
 
-    <div class="col-8 d-flex py-4">
+    <div class="col-8 d-flex py-2">
       <div class="col-4">
         <img class="logo" src="../assets/dc-logo.png" />
       </div>
