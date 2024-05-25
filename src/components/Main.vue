@@ -47,13 +47,19 @@ export default {
 
 <!-- TEMPLATE HTML -->
 <template>
-    <div class="row bg-dark justify-content-center">
-        <div class="content_container col-8">
-            <div class="col-12 d-flex align-items-center">
-                <h2>->CONTENT GOES HERE <-</h2>
-            </div>
+    <div class="jumbo_container row position-relative justify-content-center">
+        <div class="content_title_box text-center bg-primary">
+            CURRENT SERIES
         </div>
     </div>
+
+    <div class="row bg-dark justify-content-center">
+            <div class="content_container col-8">
+                <div class="col-12 d-flex align-items-center">
+                    <h2>->CONTENT GOES HERE <-</h2>
+                </div>
+            </div>
+        </div>
 
     <div class="row bg-primary justify-content-center">
         <div class="content_container col-8 d-flex">
@@ -76,6 +82,11 @@ export default {
 
 <!-- STYLE -->
 <style scoped>
+    .jumbo_container{
+        height: 300px;
+        background-image: url(../assets/jumbotron.jpg);
+        background-size: cover;
+    }
     .content_container{
         padding: 4rem 0;
     }
@@ -92,5 +103,15 @@ export default {
     img{
        width: 60px;
        aspect-ratio: 1;
+    }
+
+    .content_title_box{
+        width: 150px;
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        transform: translateY(50%);
+        color: white;
+        padding: 0.5rem;
     }
 </style>
