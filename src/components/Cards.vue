@@ -2,15 +2,29 @@
 export default {
 
     name: "Cards",
-    props:["singleComic"]
+    props:["singleComic"],
 
+    // OPPURE, MEGLIO...
+    // props:{
+    //     elemento: "singleComic"
+    // }
+
+    data() {
+            return {
+            }
+        },
+        methods:{
+            getImage(nomefile) {
+                return new URL(`../assets/${nomefile}`, import.meta.url);
+            }
+        }
 }
 </script>
 
 <template>
     <div class="card col-2 d-flex flex-column align-items-center p-1">
         <figure>
-            <img :src="singleComic.thumb" alt="">
+            <img :src= "singleComic.thumb" alt="">
         </figure>
         <p>{{ singleComic.series }}</p>
     </div>
@@ -24,7 +38,8 @@ export default {
 
     .card img{
         width: 100%;
-        aspect-ratio: 1;
+        object-fit: cover;
+        aspect-ratio: 9 / 16;
     }
     .card p{
         color: white;

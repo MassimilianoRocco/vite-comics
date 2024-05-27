@@ -116,9 +116,8 @@ export default {
         }
     },
     methods:{
-        getImg(path) {
-            let risultato = new URL("../assets/" + path, import.meta.url);
-            return risultato.href;
+        getImage(nomefile) {
+            return new URL(`../assets/${nomefile}`, import.meta.url);
         },
     }
 }
@@ -136,12 +135,14 @@ export default {
     </div>
 
     <!-- IMPORTO/UTILIZZO IL COMPONENTE CARDS -->
-    <div class="row bg-dark justify-content-center position-relative">
-        <div class="content_container col-8 d-flex flex-wrap">
-            <Cards v-for="elemento in fumetti" :singleComic="elemento"/>
-        </div>
-        <div class="loadMore_Box text-center bg-primary">
-            LOAD MORE
+    <div class="fluid-container">
+        <div class="row bg-dark justify-content-center position-relative">
+            <div class="content_container col-8 d-flex flex-wrap">
+                <Cards v-for="elemento in fumetti" :singleComic="elemento"/>
+            </div>
+            <div class="loadMore_Box text-center bg-primary">
+                LOAD MORE
+            </div>
         </div>
     </div>
 
@@ -150,7 +151,7 @@ export default {
         <div class="content_container col-8 d-flex">
             <div v-for="item in items" :href="item.url" class="items_container d-flex align-items-center justify-content-center p-2">
                 <div class="col-4 d-flex align-items-center justify-content-center">
-                    <img :src="getImg(item.img)">
+                    <img :src="getImage(item.img)">
                 </div>
                 <div class="col-8 d-flex align-items-center ms-2">
                     <p>{{ item.text }}</p>

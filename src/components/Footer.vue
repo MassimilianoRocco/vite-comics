@@ -28,9 +28,8 @@ export default {
         }
     },
     methods:{
-        getImg(path) {
-            let risultato = new URL("../assets/" + path, import.meta.url);
-            return risultato.href;
+        getImage(nomefile) {
+            return new URL(`../assets/${nomefile}`, import.meta.url);
         },
     }
 }
